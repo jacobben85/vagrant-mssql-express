@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "opentable/win-2012r2-standard-amd64-nocm"
   config.vm.network "private_network", ip: "192.168.56.120"
   config.vm.hostname = "mssql-win-2012"
+  config.vm.box_check_update = false
 
   config.vm.provider "virtualbox" do |v|
     v.name = "mssql"
